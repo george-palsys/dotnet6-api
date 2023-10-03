@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: dotnetapi-route
+  namespace: dotnetapi
+  labels:
+    app: dotnetapi
+spec:
+  to:
+    kind: Service
+    name: dotnetapi-service
+    targetPort: 8080
