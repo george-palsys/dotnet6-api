@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: dotnetapi
+  name: 'dotnetapi-deployment'
+spec:
+  selector:
+    matchLabels:
+      app: dotnetapi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dotnetapi
+    spec:
+      containers:
+        - name: container
+          image: >-
+                  image-registry.openshift-image-registry.svc:5000/dotnetapi/net6image:v1
+          ports:
+            - containerPort: 8080
+              protocol: TCP
