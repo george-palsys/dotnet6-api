@@ -1,7 +1,7 @@
 # 以 dotnet6-api 為例子，且以存放在dockerhub
 1. 查看image
 ```
-docker images |  grep docker.io/st61008/api
+docker images |  grep docker.io/georgechiu/api
 ```
 ![image](https://github.com/george-palsys/dotnet6-api/blob/main/img/1.png)
  
